@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Request Trap App</title>
+  </head>
+  <body>
+    <div class="container">
+      <%- include("partials/header") -%>
+      <h1></h1>
+        <p class="text-justify">This is a tool for capture and display HTTP/HTTPS requests.</p>
+        <p class="text-justify">This simple tool is useful during the development of apps that integrate with external services, such as http clients, webhooks, etc. The Requests Trap app provides these services with an endpoint to which they can send requests and notifications.</p>
+        <p class="text-justify">For example, let's assume you are developing an ecommerce site named “myshop" with PayPal integration. During development, Myshop can use Req App to see PayPal requests details via a specific endpoint.</p>
+        <p class="text-justify">User can setup in the PayPal service the following callback URL:</p>
+        <p class="text-center">https://requests-trap.com/myshop</p>
+        <p class="text-justify"></p>Then the user could see the IPN (Instant Payment Notification) notifications sent by PayPal here:</p>
+        <p class="text-center">https://requests-trap.com/myshop/requests</p>
+    <div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/ejs.min.js"></script>
+    <script src="/js/client.js"></script>
+  </body>
+</html>
